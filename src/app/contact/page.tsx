@@ -1,7 +1,8 @@
+import PageWrapper from '@/components/PageWrapper'
 import React from 'react'
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <PageWrapper>Contact</PageWrapper>
   )
 }
