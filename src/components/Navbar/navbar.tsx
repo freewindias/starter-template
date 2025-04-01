@@ -8,13 +8,21 @@ import Image from "next/image";
 import logo from "@/assets/images/logo.png"
 import Button from "../ui/GGButton";
 import { useTransitionRouter } from "next-view-transitions";
+import { ScrollProgress } from "../magicui/scroll-progress";
 
 const Navbar = () => {
     const router = useTransitionRouter()
     return (
-        <nav className="flex justify-between items-center py-8 px-4">
+        <nav className="flex justify-between items-center py-3 px-4">
+            <ScrollProgress className="top-[1px]"/>
             {/* Logo */}
-            <Image src={logo} alt="logo" height="100" width="150"/>
+            <Link href='/' onClick={(e) => {
+                e.preventDefault()
+                router.push('/', {
+                        onTransitionReady: pageAnimation,
+                    })
+                }}
+            ><Image src={logo} alt="logo" height="100" width="150"/></Link>
                 {/* Navigation items */}
                 <ul className="hidden sm:flex gap-6">
                     {navItems.map(({ label,href }) => (
