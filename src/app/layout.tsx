@@ -6,7 +6,7 @@ import { ViewTransitions } from "next-view-transitions";
 import ReactLenis from "lenis/react";
 
 export const metadata: Metadata = {
-  title: "Rodias",
+  title: "starter-template",
   description: "Created with Frontend Tribe",
 };
 
